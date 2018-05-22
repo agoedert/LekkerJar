@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import JamViewer from '../Jam/JamViewer';
 
 const Main = () => {
-  return (<div>
-    Hello World
-  </div>)
-}
+  return (
+    <div>
+      <JamViewer />
+    </div>
+  );
+};
 
-export default Main
+export default Main;
