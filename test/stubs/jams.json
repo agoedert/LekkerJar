@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Mermelada de Ciruela",
+        "image": "/assets/images/mermelada-ciruela.png"
+    },
+    {
+        "name": "Mermelada de Frutilla",
+        "image": "/assets/images/mermelada-frutilla.png"
+    }
+]

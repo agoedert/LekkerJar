@@ -6,7 +6,8 @@
     "build:dev": "webpack --progress --colors -d --env=dev",
     "build:uat": "webpack --progress --colors -d --env=uat",
     "build:prod": "webpack --define process.env.NODE_ENV='\"production\"' --progress --colors --env=prod",
-    "start": "webpack-dev-server --port 8081 --progress --colors -d --env=dev",
+    "start": "concurrently 'yarn run stubby' 'webpack-dev-server'",
+    "stubby": "stubby --watch --data test/stubs/stubby.json",
     "lint-js": "eslint --config .eslintrc.json ./src",
     "lint-css": "yarn run stylelint src/**/*.scss src/**/**/*.scss --syntax scss",
     "test": "nyc mocha -c --require babel-register --require test/hooks/css-modules-compiler.js -r ./test/.setup.js --require babel-polyfill --recursive ./test/unit",
@@ -57,9 +58,13 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel": "^6.23.0",
     "babel-polyfill": "^6.26.0",
+    "concurrently": "^3.5.1",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "stubby": "^4.0.0"
   }
 }

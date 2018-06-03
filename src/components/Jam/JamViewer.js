@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
 import Jam from './Jam';
+import JamClient from '../../clients/JamClient';
 
 class JamViewer extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      jams: []
+    }
+  }
+
   componentDidMount() {
-    console.log('JamViewer mounted');
+    new JamClient().getJams().then(jams => {
+      this.setState({ jams: jams.data });
+    })
   }
 
   render() {
-    return <Jam />;
+    return (
+      <div>
+        {this.state.jams.map(jam => (
+          <Jam key={jam.name} name={jam.name} image={jam.image} />
+        ))}
+      </div>
+    )
   }
 }
 
