@@ -1,10 +1,10 @@
 [
-    {
-        "name": "Mermelada de Ciruela",
-        "image": "/assets/images/mermelada-ciruela.png"
-    },
-    {
-        "name": "Mermelada de Frutilla",
-        "image": "/assets/images/mermelada-frutilla.png"
-    }
+  {
+    "name": "Ciruela con Vino Oporto",
+    "image": "/assets/images/mermelada-ciruela.png"
+  },
+  {
+    "name": "Frutilla con Aceite Balsamico",
+    "image": "/assets/images/mermelada-frutilla.png"
+  }
 ]
