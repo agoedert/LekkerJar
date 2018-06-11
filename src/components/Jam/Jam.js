@@ -10,9 +10,27 @@ class Jam extends Component {
 
   render() {
     return (
-      <div className="jam">
+      <div id="container" className="jam">
         <h2>{this.props.name}</h2>
-        <img src={this.props.image} alt={this.props.name} />
+        <img
+          className="jam-image"
+          src={this.props.image}
+          alt={this.props.name}
+        />
+
+        <div id="actions" className="jam-actions">
+          <div className="jam-add-button">
+            <a href="www.google.com">
+              <img src="/assets/images/plus.png" alt="add" />
+            </a>
+          </div>
+
+          <div id="remove" className="jam-remove-button">
+            <a href="www.google.com">
+              <img src="/assets/images/remove.png" alt="remove" />
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
