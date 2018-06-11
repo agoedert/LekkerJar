@@ -4,7 +4,15 @@
     "image": "/assets/images/mermelada-ciruela.png"
   },
   {
+    "name": "Durazno con Amaretto",
+    "image": "/assets/images/mermelada-durazno.png"
+  },
+  {
     "name": "Frutilla con Aceite Balsamico",
     "image": "/assets/images/mermelada-frutilla.png"
+  },
+  {
+    "name": "Higo con Vino Oporto",
+    "image": "/assets/images/mermelada-higo.png"
   }
 ]
